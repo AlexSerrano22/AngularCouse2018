@@ -1,0 +1,14 @@
+<div class="b-post-wrapper">
+  <div class="b-post" *ngIf="post">
+    <h1 class="b-post-title">
+      {{post.title}}
+    </h1>
+    <div class="b-post-content">
+    <span>
+      {{post.content}}
+    </span>
+    </div>
+  </div>
+</div>
+<app-comments>
+</app-comments>

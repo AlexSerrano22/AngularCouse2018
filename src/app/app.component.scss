@@ -1,0 +1,8 @@
+@import "./../_variables";
+
+.b-app-container{
+  background-color: $bg-color;
+  display: block;
+  height: 100%;
+  padding: 40px 0;
+}

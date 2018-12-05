@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.b-comments-wrapper {
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  padding: 20px;
+  background-color: lighten($bg-color, 30%);
+  .b-comments{
+    border-bottom: 1px solid $dark-bg-color;
+    margin-bottom: 15px;
+  }
+}
+
+

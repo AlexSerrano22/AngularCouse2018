@@ -1,0 +1,27 @@
+<div class="col-8">
+
+  <h1>Alex's Blog</h1>
+
+  <div *ngFor="let post of posts" class="b-post-element">
+    <div class="b-post__meta-data">
+    <span class="b-post-author">
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{post.author}}
+    </span>
+      <span class="b-post-date">
+      <i class="fa fa-calendar" aria-hidden="true"></i> {{post.date | formatDate}}
+    </span>
+    </div>
+    <h4><a routerLink="/post/{{post.id}}">{{post.title}}</a></h4>
+
+    <span class="b-post__sum">
+    {{post.content | cutString: 40}}
+  </span>
+  </div>
+
+  <div class="b-blog-actions">
+    <a class="float-right btn badge-primary" role="button" routerLink="/create-post">
+      <i class="fa fa-plus"></i> Create Post
+    </a>
+  </div>
+
+</div>

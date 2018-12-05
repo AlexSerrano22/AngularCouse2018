@@ -1,0 +1,23 @@
+<div class="b-comments-wrapper">
+
+  <div class="b-comments">
+    <ng-container *ngFor="let comment of comments; let i = index">
+      <app-comment [comment]="comment">
+      </app-comment>
+    </ng-container>
+  </div>
+
+
+
+  <div class="b-comments-form">
+    <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="comment">
+          Comment:
+        </label>
+        <input class="form-control" type="text" id="comment" formControlName="newComment" placeholder="type a new comment">
+      </div>
+    </form>
+  </div>
+
+</div>

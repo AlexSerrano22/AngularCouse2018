@@ -1,0 +1,16 @@
+@import "../../../variables";
+
+.b-comment-info {
+  font-size: 10px;
+  font-style: italic;
+  color: gray;
+}
+
+.b-comment-content {
+  text-transform: capitalize;
+}
+
+.b-comment {
+  padding: 10px 0;
+  border-top: 1px solid lightgrey;
+}

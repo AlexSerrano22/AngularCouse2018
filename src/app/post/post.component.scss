@@ -1,0 +1,10 @@
+@import "../../variables";
+
+.b-post-wrapper{
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  background-color: lighten($bg-color, 30%);
+  padding: 20px;
+  box-shadow: darken($bg-color, 30%) 2px 2px 14px 1px ;
+}
