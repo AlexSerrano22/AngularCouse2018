@@ -1,0 +1,76 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "This is a post",
+      "author": "Alex",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat architecto, perferendis ab iure voluptas quia quae magnam neque qui, aut nemo praesentium facilis dolore at officiis mollitia. Veritatis, est, laboriosam.",
+      "date": "12-01-2018"
+    },
+    {
+      "id": 2,
+      "title": "This is another post",
+      "author": "Alex",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat architecto, perferendis ab iure voluptas quia quae magnam neque qui, aut nemo praesentium facilis dolore at officiis mollitia. Veritatis, est, laboriosam.",
+      "date": "02-12-2018"
+    },
+    {
+      "date": "2018-12-05T18:17:48.137Z",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "title": "New Post",
+      "author": "Alex",
+      "id": 3
+    },
+    {
+      "date": "2018-12-05T20:50:02.002Z",
+      "content": "saadasd",
+      "title": "new Post 3",
+      "author": "Alex",
+      "id": 4
+    },
+    {
+      "date": "2018-12-05T21:33:26.521Z",
+      "content": "test",
+      "title": "new test",
+      "author": "test",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1,
+      "author": "someone",
+      "created": "2-12-2018"
+    },
+    {
+      "body": "new comment",
+      "postId": 1,
+      "author": "someone",
+      "id": 2,
+      "created": "1-12-2018"
+    },
+    {
+      "body": ":O",
+      "postId": 1,
+      "author": "someone",
+      "id": 3,
+      "created": "1-12-2018"
+    },
+    {
+      "body": "lala",
+      "postId": 1,
+      "author": "someone",
+      "id": 4,
+      "created": "2-12-2018"
+    },
+    {
+      "body": "a",
+      "postId": 1,
+      "author": "someone",
+      "created": "2018-12-05T21:30:42.184Z",
+      "id": 5
+    }
+  ]
+}
