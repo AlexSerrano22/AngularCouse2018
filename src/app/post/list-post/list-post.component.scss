@@ -1,0 +1,16 @@
+.b-post-element {
+  border-bottom: solid 1px lightgrey;
+  padding: 30px 10px;
+  background-color: #fbfbfb;
+}
+.b-post__sum{
+  color: gray;
+  font-size: 12px;
+}
+.b-post__meta-data{
+  text-align: right;
+  > * {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

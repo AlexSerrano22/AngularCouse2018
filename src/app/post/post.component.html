@@ -10,5 +10,6 @@
     </div>
   </div>
 </div>
-<app-comments>
+<app-comments *ngIf="post" [post]="post" (handleCommentCreated)="on_comment_created($event)">
+  {{post.title}} comments:
 </app-comments>

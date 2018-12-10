@@ -21,7 +21,7 @@ export class CommentComponent implements OnInit {
 export interface Comment {
   id?: number;
   body: string;
-  postId: number;
-  author: string;
-  created: Date;
+  postId?: number;
+  author?: string;
+  created?: Date;
 }

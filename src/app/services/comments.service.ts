@@ -3,6 +3,8 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Comment} from '../comments/comment/comment.component';
 import {map} from 'rxjs/operators';
+import {CarbonLDP} from 'carbonldp';
+import {Document} from 'carbonldp/Document';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,7 @@ export class CommentsService {
 
   BASE_API_URL = 'http://localhost:3000/';
 
-  constructor(private _httpClient: HttpClient) {
+  constructor(private _httpClient: HttpClient, private _carbonLDP: CarbonLDP) {
   }
 
   getAllComments(postId): Observable<Array<Comment>> {
@@ -35,5 +37,14 @@ export class CommentsService {
     } else {
       return 0;
     }
+  }
+
+  /**
+   * CARBON LDP
+   * */
+
+  createCarbonComment(comment: Comment): Promise<Comment & Document> {
+    comment['types'] = ['Comment'];
+    return this._carbonLDP.documents.$createAndRetrieve('comments/', comment);
   }
 }

@@ -11,7 +11,11 @@ export class BlogComponent implements OnInit {
   posts: Array<Post> = [];
 
   constructor(private _postService: PostService) {
-    this._postService.getAllPost().subscribe((data) => {
+   /* this._postService.getAllPost().subscribe((data) => {
+      this.posts = data;
+    });*/
+    this._postService.getAllCarbonPost().then((data) => {
+      console.log(data);
       this.posts = data;
     });
   }

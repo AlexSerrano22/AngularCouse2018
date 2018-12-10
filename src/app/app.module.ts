@@ -17,6 +17,9 @@ import { CutStringPipe } from './pipes/cut-string.pipe';
 import { HeaderComponent } from './header/header.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
+import { CreateAuthorComponent } from './author/create-author/create-author.component';
+import { ListPostComponent } from './post/list-post/list-post.component';
+import { AuthorPostsComponent } from './author/author-posts/author-posts.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { TimeAgoPipe } from './pipes/time-ago.pipe';
     CutStringPipe,
     HeaderComponent,
     CreatePostComponent,
-    TimeAgoPipe
+    TimeAgoPipe,
+    CreateAuthorComponent,
+    ListPostComponent,
+    AuthorPostsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+<div *ngFor="let post of posts" class="b-post-element">
+  <div class="b-post__meta-data">
+    <span class="b-post-author">
+      <!--<i class="fa fa-user-circle-o" aria-hidden="true"></i> {{post.author}}-->
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{post.author.firstName}}
+    </span>
+    <span class="b-post-date">
+      <i class="fa fa-calendar" aria-hidden="true"></i> {{post.date | formatDate}}
+    </span>
+  </div>
+  <h4><a routerLink="/post/{{post.$slug}}">{{post.title}}</a></h4>
+
+  <span class="b-post__sum">
+    {{post.content | cutString: 40}}
+  </span>
+</div>

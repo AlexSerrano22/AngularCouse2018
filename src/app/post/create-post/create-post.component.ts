@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PostService} from '../../services/post.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Post} from '../post.component';
+import {AuthorService} from '../../services/author.service';
 
 @Component({
   selector: 'app-create-post',
@@ -13,7 +14,6 @@ export class CreatePostComponent implements OnInit {
     title: '',
     content: '',
     author: '',
-    date: new Date()
   };
   newPostForm = new FormGroup({
     title: new FormControl(this.post.title, [Validators.required, Validators.minLength(4)]),
@@ -22,23 +22,37 @@ export class CreatePostComponent implements OnInit {
   });
 
 
-  constructor(private _postService: PostService) {
+  constructor(private _postService: PostService, private _authorService: AuthorService) {
   }
 
   ngOnInit() {
   }
 
   createPost() {
-    const post: Post = {
-      date: new Date(),
+    /*const post: Post = {
       content: this.newPostForm.value.content,
       title: this.newPostForm.value.title,
       author: this.newPostForm.value.author,
+    };*/
+    const post: Post = {
+      content: this.newPostForm.value.content,
+      title: this.newPostForm.value.title,
     };
 
-    this._postService.createPost(post).subscribe((res) => {
+    this._postService.createCarbonPost(post).then((document) => {
+      this._authorService.addPost(this.newPostForm.value.author, document.$id);
+      /* const commentsMembersAccessPoint = AccessPoint.create({
+         hasMemberRelation: 'posts',
+         isMemberOfRelation: 'author'
+       });
+       return authorDocument.$create(postMembersAccessPoint, 'posts');
+     }).then(() => {*/
       this.newPostForm.reset();
     });
+    /*
+    this._postService.createPost(post).subscribe((res) => {
+      this.newPostForm.reset();
+    });*/
 
   }
 

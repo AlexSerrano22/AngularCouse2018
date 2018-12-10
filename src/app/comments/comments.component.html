@@ -1,5 +1,5 @@
 <div class="b-comments-wrapper">
-
+  <ng-content></ng-content>
   <div class="b-comments">
     <ng-container *ngFor="let comment of comments; let i = index">
       <app-comment [comment]="comment">
